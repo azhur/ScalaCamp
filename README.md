@@ -1,0 +1,2 @@
+# ScalaCamp
+Scala Core Concepts

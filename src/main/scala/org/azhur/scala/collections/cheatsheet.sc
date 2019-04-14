@@ -70,10 +70,13 @@ val withIndexes = languages.zipWithIndex
 val zipped = jvmLanguages.zip(nonJvmLanguages)
 val unzipped = zipped.unzip
 
+// intersect|union|distinct|diff
 val intersection = jvmLanguages.intersect(nonJvmLanguages)
 val union = jvmLanguages.union(nonJvmLanguages)
 val distinct = languages.distinct
+val diff = jvmLanguages.diff(nonJvmLanguages)
 
+// maxBy|max|sum
 val maxBy = languages.maxBy(_.length)
-val ma = languages.max
+val max = languages.max
 val sum = languages.map(_.length).sum

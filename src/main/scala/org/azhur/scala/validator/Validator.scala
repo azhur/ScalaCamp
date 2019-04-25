@@ -16,7 +16,7 @@ trait Validator[T] {
     * And combinator.
     * @param other validator to be combined with 'and' with this validator.
     * @return the Right(value) only in case this validator and <code>other</code> validator returns valid value,
-    *         otherwise Left with error messages from both validators.
+    *         otherwise Left with error messages from the validator that failed.
     */
   def and(other: Validator[T]): Validator[T] = ???
 
@@ -24,7 +24,7 @@ trait Validator[T] {
     * Or combinator.
     * @param other validator to be combined with 'or' with this validator.
     * @return the Right(value) only in case either this validator or <code>other</code> validator returns valid value,
-    *         otherwise Left with error messages from the failed validator or from both if both failed.
+    *         otherwise Left with error messages from both validators.
     */
   def or(other: Validator[T]): Validator[T] = ???
 }

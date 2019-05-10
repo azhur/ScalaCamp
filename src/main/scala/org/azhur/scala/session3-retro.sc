@@ -12,6 +12,7 @@ import java.util.concurrent.atomic.AtomicLong
 import cats.{Id, Monad}
 
 import scala.concurrent.Await
+import scala.language.higherKinds
 // NOTE: This import bring into the scope implicits that allow you to call .map and .flatMap on the type F[_]
 // and also bring you typeclasses that know how to flatmap (Monad) and map (Functor) over your higher-kinded type.
 import cats.implicits._

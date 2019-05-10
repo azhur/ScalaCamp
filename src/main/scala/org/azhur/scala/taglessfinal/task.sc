@@ -45,8 +45,8 @@ class UserService[F[_]](repository: UserRepository[F])
     })
   }
 
-  def getByUsername(username: String): F[Option[String]] = ???
-  def getById(id: Long): F[Option[String]] = ???
+  def getByUsername(username: String): F[Option[User]] = ???
+  def getById(id: Long): F[Option[User]] = ???
 }
 
 class IotDeviceService[F[_]](repository: IotDeviceRepository[F],

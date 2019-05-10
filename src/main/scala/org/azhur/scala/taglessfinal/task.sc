@@ -54,7 +54,7 @@ class IotDeviceService[F[_]](repository: IotDeviceRepository[F],
                             (implicit monad: Monad[F]) {
 
   // the register should fail with Left if the user doesn't exist or the sn already exists.
-  def registerDevice(userId: Long, sn: String): F[Either[String, User]] = ???
+  def registerDevice(userId: Long, sn: String): F[Either[String, IotDevice]] = ???
 }
 
 // task1: implement in-memory Respository with Id monad.

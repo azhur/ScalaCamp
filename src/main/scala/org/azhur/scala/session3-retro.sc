@@ -67,7 +67,6 @@ class InMemoryUserRepositoryFuture(implicit val ec: ExecutionContext) extends Us
   }
 
   override def getByUsername(username: String): Future[Option[User]] = Future {
-    println()
     storage.values.find(_.username == username)
   }
 }
